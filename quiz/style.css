@@ -1,0 +1,87 @@
+body{
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+#container{
+    background-color: white;
+    height: 650px;
+    width: 400px;
+    padding: 20px;
+}
+h1{
+    font-size: 40px;
+    text-align: center;
+    color: #190482;
+    font-family: 'Caveat', cursive;
+font-family: 'DM Serif Text', serif;
+font-family: 'Fasthand', cursive;
+font-family: 'IBM Plex Serif', serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'PT Serif', serif;
+font-family: 'Roboto Serif', serif;
+}
+#Question{
+    margin-top: 50px;
+    color: #7752FE;
+    font-family: 'Caveat', cursive;
+font-family: 'DM Serif Text', serif;
+font-family: 'Fasthand', cursive;
+font-family: 'IBM Plex Serif', serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'PT Serif', serif;
+font-family: 'Roboto Serif', serif;
+}
+#answer-buttons button{
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-top: 50px;
+    height:40px;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-family: 'Caveat', cursive;
+font-family: 'DM Serif Text', serif;
+font-family: 'Fasthand', cursive;
+font-family: 'IBM Plex Serif', serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'PT Serif', serif;
+font-family: 'Roboto Serif', serif;
+border: 3px solid black;
+}
+#nextQuestion{
+    display: block;
+    margin-top: 50px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color:#C2D9FF;
+    font-family: 'Caveat', cursive;
+    font-family: 'DM Serif Text', serif;
+    font-family: 'Fasthand', cursive;
+    font-family: 'IBM Plex Serif', serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'PT Serif', serif;
+    font-family: 'Roboto Serif', serif;
+}
+#answer-buttons button:hover:not([disabled]){
+    background-color: white;
+    border: 3px solid blue;
+}
+#answer-buttons button:disabled{
+    cursor: no-drop;
+}
+.correct{
+    background-color: #90EE90;
+    color:black;
+}
+.incorrect{
+    background-color:#FF1D18;
+    color: black;
+}

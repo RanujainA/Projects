@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=DM+Serif+Text&family=Fasthand&family=IBM+Plex+Serif:wght@300&family=Libre+Baskerville:wght@400;700&family=Montserrat&family=PT+Serif&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <p><i class="ri-arrow-left-s-line"></i></p>
+            <p><i class="ri-align-justify"></i></p>
+        </nav>
+        <div class="details">
+            <img src="./aamir-khan.jpg">
+            <p id="header">Aamir-Khan Special-Kahani song</p>
+            <p id="singer">Sonu Nigam</p>
+        </div>
+        <div id="playit">
+            <audio id="song">
+                <source src="./song.mp3">
+            </audio>
+            <input type="range" id="progress">
+        </div>
+        <div class="ctrl">
+            <p><i class="ri-rewind-line"></i></p>
+            <p onclick="startPause()"><i class="ri-play-fill" id="play"></i></p>
+            <p><i class="ri-speed-fill"></i></p>
+        </div>
+    </div>
+    <script>
+        var song=document.querySelector("#song");
+        var progress=document.querySelector("#progress");
+        var play=document.querySelector("#play");
+        song.onloadedmetadata=function(){
+            progress.max=song.duration;
+            progress.value=song.currentTime;
+        }
+        function startPause(){
+            if(play.classList.contains("ri-pause-line")){
+                song.pause();
+                play.classList.remove("ri-pause-line");
+                play.classList.add("ri-play-fill");
+            }
+            else if(play.classList.contains("ri-play-fill")){
+                song.play();
+                play.classList.remove("ri-play-fill");
+                play.classList.add("ri-pause-line");
+            }
+        }
+        play.addEventListener("click",function(){
+            setInterval(function(){
+                progress.value=song.currentTime;
+            },500);
+        });
+        progress.onchange=function(){
+            song.play();
+            song.currentTime=progress.value;
+            play.classList.add("ri-pause-line");
+            play.classList.remove("ri-play-fill");
+        }
+    </script>
+</body>
+</html>
