@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=DM+Serif+Text&family=Fasthand&family=IBM+Plex+Serif:wght@300&family=Libre+Baskerville:wght@400;700&family=Montserrat&family=PT+Serif&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <h1 class="closeBtn"><i class="ri-close-line"></i></h1>
+        <div class="profile">
+            <img src="./ranu.jpg">
+            <h1>Ranu Jain</h1>
+            <div class="links">                
+                <a href="https://www.linkedin.com/in/ranu-a-jain/"><i class="ri-linkedin-line"></i></a>
+                <a href="https://www.instagram.com/ranu_sri_sri_mal/"><i class="ri-instagram-line"></i></a>
+            </div>
+        </div>
+        <div class="tabs">
+            <a href="#part2"><i class="ri-home-4-line"></i><span>Home</span></a>
+            <a href="#part3"><i class="ri-user-line"></i><span>About</span></a>
+            <a href="#part4"><img src="/projects.jpg" id="projects"><span>Projects</span></a>
+            <a href="#part5"><i class="ri-mail-line"></i><span>Contact</span></a>
+        </div>
+    </div>
+     <div id="part2">
+        <h1 class="toggle" style="cursor: pointer;"><i class="ri-align-justify"></i></h1>
+        <img src="./ranu1.jpg">
+        <h1>Ranu Srisrimal</h1>
+        <p>a <span id="typingeff"></span></p>
+    </div>
+    <div id="part3">
+        <h1>About</h1>
+        <p>Undergraduate Computer Science Student at SJC Institute of Technology. <br>
+        EXPERTISE : HTML , CSS , JAVASCRIPT , OPERATING SYSTEM <br>
+        <i class="ri-arrow-right-s-line"></i>BIRTHDAY: 19 Jan 2004 <br>
+        <i class="ri-arrow-right-s-line"></i>City: Bangalore <br>
+        <i class="ri-arrow-right-s-line"></i>Age: 19</p>
+    </div>
+    <div id="part4">
+        <h1>Projects</h1>
+        <h2>Done using HTML, CSS and Javascript</h2>
+        <div class="projects">
+            <div class="project1">
+                <img src="./music player.png">
+                <a href="https://ranujaina.github.io/Projects/music-player">Music Player</a>
+                <p>Used input-range tag => its max-value set to audio duration , value set to audio currenttime and by using setinterval async function everytime after 500ms it assigns the value of range to song's currentime. </p>
+            </div>
+            <div class="project2">
+                <img src="./quiz.png">
+                <a href="https://ranujaina.github.io/Projects/quiz">Quiz</a>
+                <p>Used array of objects,at every index of array there is an object containing question and array of answers where each answer is an object with properties => text and correct(in boolean).</p>
+            </div>
+            <div class="project3">
+                <img src="./agecal.png">
+                <a href="https://ranujaina.github.io/Projects/age-cal">Age Calculator</a>
+                <p>Used Javascript Date object twice one for fetching current date,month,year and another for user entered value in input tag.</p>
+            </div>
+        </div>
+    </div>
+    <div id="part5">
+        <h1>Contact Me</h1>
+        <p>Phone Number: +1234567891</p>
+        <div class="links-contact">                
+            <a href="https://www.linkedin.com/in/ranu-a-jain/"><i class="ri-linkedin-line"></i></a>
+            <a href="https://www.instagram.com/ranu_sri_sri_mal/"><i class="ri-instagram-line"></i></a>
+        </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

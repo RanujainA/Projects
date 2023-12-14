@@ -1,0 +1,304 @@
+body{
+    width:100%;
+    height:100%;
+    font-family: 'Caveat', cursive;
+    font-family: 'DM Serif Text', serif;
+    font-family: 'Fasthand', cursive;
+    font-family: 'IBM Plex Serif', serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Serif', serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.sidebar{
+    width:20%;
+    height:100%;
+    position: fixed;
+    background-color: black;
+    color:#fff;
+    transform: translate(0);
+    transition: transform 200ms ease-in-out;
+}
+.tggle{
+    transform: translate(-150%);
+}
+.sidebar h1 i{
+    position: absolute;
+    right:10px;
+    top:10px;
+    cursor: pointer;
+    display: none;
+}
+#part2 i{
+    position: absolute;
+    right:10px;
+    top:10px;
+    display: none;
+}
+.profile{
+    height:320px;
+    gap:10px;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+}
+.profile img{
+    margin-top: 10px;
+    height:150px;
+    width:150px;
+    border-radius: 50%;
+}
+.profile h1{
+    font-weight: 900;
+    font-size: 30px;
+}
+.links i{
+    font-size: 30px;
+    border-radius: 50%;
+    color:#fff;
+    border: 2px solid white;
+    padding: 10px;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    gap:50px;
+}
+.links a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.tabs{
+    padding: 0px 20px;
+}
+.tabs a{
+    height:50px;
+    display: flex;
+    gap:8px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    font-size: 30px;
+    font-weight: 700;
+    color:#fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+#projects{
+    height:30px;
+    width:30px;
+    color:#fff;
+    border-radius: 50%;
+}
+.tabs a span{
+    position: relative;
+}
+.tabs a span::before{
+    content: '';
+    position: absolute;
+    border-bottom: 3px solid gold;
+    right:0;
+    left:0;
+    bottom: 0;
+    transform:scale(0);
+    transition: transform 400ms ease-in-out;
+}
+.tabs a span:hover::before,
+.tabs a span:focus::before{
+    transform: scale(1);
+}
+#part2{
+    height: 100vh;
+    background-image: url(./bg.png);
+    width: 80%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    left:300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#part2 img{
+    width: 400px;
+    height: 300px;
+    border-radius: 20%;
+}
+#part2 h1{
+    font-size: 40px;
+    margin-top: 30px;
+}
+#part2 p{
+    font-size: xx-large;
+    margin-top: 30px;
+    font-weight: 700px;
+}
+#part2 span{
+    border-bottom: 4px solid blueviolet;
+}
+#part3,#part4{
+    width: 70%;
+    position: relative;
+    left: 300px;
+    background-color: black;
+    color: #fff;
+    padding: 20px 80px;
+}
+.projects p{
+    margin-top: 20px;
+    font-size: larger;
+    font-weight: 400;
+}
+#part3 h1,#part4 h1,#part5 h1{
+    font-size: 40px;
+    position: relative;
+}
+#part3 h1::before,
+#part4 h1::before,
+#part5 h1::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 40px;
+    background-color: gold;
+    top:50px;
+    left:40px;
+}
+#part3 p,#part5 p{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 400;
+}
+#part4 h2{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 400;
+}
+#part4 .projects{
+    margin-top: 30px;
+    display: flex;
+    gap:20px;
+}
+.projects img{
+    height: 500px;
+    width: 350px;
+}
+.projects a{
+    font-size: 30px;
+    text-decoration: none;
+    color:#fff;
+    cursor: pointer;
+    color: gold;
+    text-align: center;
+}
+#part5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    width: 80%;
+    height: 300px;
+    position: relative;
+    left: 300px;
+}
+.links-contact{
+    display: flex;
+    flex-direction: row;
+    gap:50px;
+    margin-top: 40px;
+}
+.links-contact i{
+    font-size: 30px;
+    border-radius: 50%;
+    border: 3px solid white;
+    padding: 10px;
+    color:#fff;
+}
+.links-contact a{
+    cursor: pointer;
+    text-decoration: none;
+}
+@media (min-width:350px) and (max-width:450px) {
+    .sidebar h1 i{
+        display: block;
+    }
+    #part2 i{
+        display: block;
+    }
+    
+    #part2{
+        width: 100%;
+        height: 100%;
+        left:0;
+        position: relative;
+    }
+    #part3,#part4,#part5{
+        width: 95%;
+        left: 0;
+        padding: 10px 10px;
+        position: relative;
+    }
+    .sidebar{
+        width:100%;
+        height:100%;
+        position: fixed;
+        z-index: 1;
+        background-color: black;
+        color:#fff;
+        transform: translate(-100%);
+        transition: transform 200ms ease-in-out;
+    }
+    .tggle{
+        transform: translate(0);
+    }
+    #part2 img{
+        width: 200px;
+        height: 200px;
+    }
+    #part2 h1{
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    #part2 p{
+        font-size: large;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    #part3 h1,#part4 h1,#part5 h1{
+        font-size: x-large;
+    }
+    #part3 h1::before,
+    #part4 h1::before,
+    #part5 h1::before{
+        width: 30px;
+        top:30px;
+        left:20px;
+    }
+    #part3 p,#part5 p{
+        font-size: 20px;
+    }
+    #part4 h2{
+        font-size: 20px;
+    }
+    #part4 .projects{
+        flex-direction: column;
+        gap:30px;
+    }
+    .projects img{
+        height: 400px;
+    }
+    .links-contact i{
+        font-size: 20px;
+    }
+}
